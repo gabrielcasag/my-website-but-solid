@@ -1,0 +1,55 @@
+@keyframes link-hover {
+  25% {
+    border-color: transparent transparent var(--color-fg) transparent;
+  }
+
+  50% {
+    border-color: transparent var(--color-fg) var(--color-fg) transparent;
+  }
+
+  75% {
+    border-color: var(--color-fg) var(--color-fg) var(--color-fg) transparent;
+  }
+
+  100% {
+    border-color: var(--color-fg);
+  }
+}
+
+.text-box {
+  cursor: pointer;
+  padding: 4px;
+
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  position: relative;
+  border: 2px solid transparent;
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &:hover {
+    /* opacity: 0.8; */
+    /* font-weight: 900; */
+    animation: link-hover 0.2s ease;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+    /* box-shadow: ${({ theme }) => theme.colors.shadow}; */
+  }
+
+  i {
+    margin-right: 8px;
+    line-height: 0;
+  }
+}
+
+
+/* @media screen and (min-width: ${devices.desktop}) {
+  font-size: 16px;
+  padding: 6px;
+} */

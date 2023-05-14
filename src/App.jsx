@@ -1,9 +1,15 @@
-import logo from "./logo.svg";
-import styles from "./App.module.css";
-import Count from "./components/Count";
+import Header from "./components/Header";
 
 function App() {
-  return <Count />;
+  return (
+    <div
+      style={{
+        display: "flex",
+      }}
+    >
+      <Header />
+    </div>
+  );
 }
 
 export default App;
