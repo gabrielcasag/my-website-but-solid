@@ -16,6 +16,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-solid": "^0.12.1",
+    "sass": "^1.62.1",
     "vite": "^4.1.1",
     "vite-plugin-solid": "^2.5.0"
   },
