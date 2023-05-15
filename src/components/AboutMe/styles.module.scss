@@ -17,7 +17,7 @@
 
 .imageWrapper {
   border-radius: 8px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 2px 8px var(--box-shadow);
 
   width: auto;
   height: 184px;
@@ -52,7 +52,7 @@
     padding: 1rem;
     border-radius: 8px;
 
-    color: #1a1a1a;
+    color: var(--color-bg);
     font-size: 16px;
     font-weight: 500;
 
@@ -65,9 +65,11 @@
     gap: 6px;
 
     i {
-      color: #60d2af;
+      color: #4ae963;
+      // color: #60d2af;
+
       font-size: 16px;
-      animation: moveLocation 2s infinite alternate;
+      animation: moveLocation 7s infinite alternate;
 
       transition: all 2s ease;
       // animation: name duration timing-function delay iteration-count  fill-mode;
@@ -81,9 +83,9 @@
   }
   50% {
     transform: rotate(-15deg);
-    filter: brightness(200%);
   }
   100% {
+    filter: brightness(150%);
     transform: rotate(0);
   }
 }

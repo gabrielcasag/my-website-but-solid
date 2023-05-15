@@ -11,10 +11,10 @@
   display: grid;
   grid-template-areas:
     "header"
-    "body"
+    "main"
     "footer";
 
-  // > main {
-  //   grid-area: body;
-  // }
+  > main {
+    grid-area: main;
+  }
 }

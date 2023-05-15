@@ -1,9 +1,5 @@
 /* set light mode color as default value */
 :root {
-  /* colors */
-  --color-bg: #ffffff75;
-  --color-fg: #121212;
-
   /* devices */
   --mobileS: 320px;
   --mobileM: 375px;
@@ -15,20 +11,40 @@
 
   /* sizing */
   --max-width-container: var(--laptop);
+
+  /* font */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-bg: #ffffff75;
-    --color-fg: #121212;
+    --color-bg: rgb(255, 255, 255);
+    --color-fg: rgb(18, 18, 18);
+
+    --box-shadow: rgba(18, 18, 18, 0.5);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #121212;
-    --color-fg: #f0f0f0;
+    --color-bg: rgb(18, 18, 18);
+    --color-fg: rgb(240, 240, 240);
+
+    --box-shadow: rgba(240, 240, 240, 0.2);
   }
+}
+
+:root.theme-light {
+  --color-bg: rgb(255, 255, 255);
+  --color-fg: rgb(18, 18, 18);
+
+  --box-shadow: rgba(18, 18, 18, 0.5);
+}
+
+:root.theme-dark {
+  --color-bg: rgb(18, 18, 18);
+  --color-fg: rgb(240, 240, 240);
+
+  --box-shadow: rgba(240, 240, 240, 0.2);
 }
 
 * {
@@ -52,6 +68,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
 }
 
 a {

@@ -6,7 +6,7 @@ const TextBox = (props) => {
   const [local, others] = splitProps(props, ["children"]);
 
   return (
-    <div {...others} class={styles["text-box"]}>
+    <div {...others} class={styles["textBox"]}>
       {local.children}
     </div>
   );

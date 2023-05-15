@@ -1,0 +1,57 @@
+.footerContainer {
+  grid-area: footer;
+
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  // @media screen and (max-width: ${devices.tablet}) {
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+}
+
+.ctaWrapper {
+  display: flex;
+  max-width: 840px;
+  flex: 0.6;
+
+  // footer line
+  border-bottom: 2px solid var(--color-fg);
+  border-left: 2px solid var(--color-fg);
+  border-bottom-left-radius: 8px;
+
+  padding: 16px 0 16px 16px;
+
+  // @media screen and (max-width: ${devices.tablet}) {
+  //   display: none;
+  // }
+
+  button {
+    background: var(--color-fg);
+    color: var(--color-bg);
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+
+    padding: 4px 12px;
+    font-size: 18px;
+    font-weight: 500;
+
+    transition: all 120ms ease-in;
+
+    &:hover {
+      box-shadow: 0px 0px 14px var(--box-shadow);
+      // box-shadow: ${({ theme }) => theme.colors.shadow};
+    }
+  }
+}
+
+.contactsWrapper {
+  flex: 0.4;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

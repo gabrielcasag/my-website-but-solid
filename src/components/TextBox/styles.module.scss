@@ -16,9 +16,9 @@
   }
 }
 
-.text-box {
+.textBox {
   cursor: pointer;
-  padding: 4px;
+  padding: 4px 12px;
 
   font-size: 14px;
   font-weight: 500;
@@ -32,10 +32,7 @@
   align-items: center;
   justify-content: center;
 
-
   &:hover {
-    /* opacity: 0.8; */
-    /* font-weight: 900; */
     animation: link-hover 0.2s ease;
     animation-iteration-count: 2;
     animation-fill-mode: forwards;
@@ -47,7 +44,6 @@
     line-height: 0;
   }
 }
-
 
 /* @media screen and (min-width: ${devices.desktop}) {
   font-size: 16px;
