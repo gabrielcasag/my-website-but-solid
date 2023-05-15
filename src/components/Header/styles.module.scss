@@ -1,13 +1,12 @@
 .header {
   display: flex;
   justify-content: space-between;
-  max-width: 1180px;
+  max-width: var(--max-width-container);
   width: 100%;
   margin: 8px auto;
   height: 42px;
 
   grid-area: header;
-  
 }
 
 .gLink {
@@ -53,5 +52,4 @@
 
     gap: 2rem;
   }
-
 }

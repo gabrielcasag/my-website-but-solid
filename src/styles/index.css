@@ -1,7 +1,20 @@
 /* set light mode color as default value */
 :root {
+  /* colors */
   --color-bg: #ffffff75;
   --color-fg: #121212;
+
+  /* devices */
+  --mobileS: 320px;
+  --mobileM: 375px;
+  --mobileL: 425px;
+  --tablet: 768px;
+  --laptop: 1024px;
+  --laptopL: 1440px;
+  --desktop: 2560px;
+
+  /* sizing */
+  --max-width-container: var(--laptop);
 }
 
 @media (prefers-color-scheme: light) {
@@ -45,6 +58,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 @media (max-width: 1080px) {
   html {
     font-size: 93.75%;

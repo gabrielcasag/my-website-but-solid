@@ -1,0 +1,89 @@
+.aboutMeSection {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  width: 100%;
+
+  gap: 2rem;
+
+  // @media screen and (max-width: ${devices.tablet}) {
+  //   max-width: 100%;
+  // }
+
+  // @media screen and (min-width: ${devices.desktop}) {
+  //   max-width: 60%;
+  // }
+}
+
+.imageWrapper {
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+
+  width: auto;
+  height: 184px;
+
+  background-color: var(--color-fg);
+  overflow: hidden;
+
+  background-image: url("../../assets/me2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.myInfoContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  z-index: 9;
+
+  > h1 {
+    font-size: clamp(24px, 1.5vw, 32px);
+  }
+
+  > h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  > p {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-fg);
+
+    padding: 1rem;
+    border-radius: 8px;
+
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 500;
+
+    min-height: 80px;
+  }
+
+  > small {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    i {
+      color: #60d2af;
+      font-size: 16px;
+      animation: moveLocation 2s infinite alternate;
+
+      transition: all 2s ease;
+      // animation: name duration timing-function delay iteration-count  fill-mode;
+    }
+  }
+}
+
+@keyframes moveLocation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-15deg);
+    filter: brightness(200%);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
