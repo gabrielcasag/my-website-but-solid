@@ -5,14 +5,13 @@ import TextBox from "../TextBox";
 import styles from "./styles.module.scss";
 
 const initializeTheme = () => {
-  let theme;
-  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-    theme = localStorage.getItem("theme");
-  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  let theme = "light";
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     theme = "dark";
-  } else {
-    theme = "light";
+  } else if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+    theme = localStorage.getItem("theme");
   }
+
   return theme;
 };
 
@@ -39,7 +38,7 @@ const Header = () => {
   return (
     <header class={styles.header}>
       <div class={styles.gLink}>
-        <span></span>
+        <span />
         <a href="">G</a>
       </div>
 
@@ -48,7 +47,8 @@ const Header = () => {
           <li>
             <TextBox
               style={{
-                cursor: `url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>🚧</text></svg>"), auto`,
+                cursor:
+                  "url(\"data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>🚧</text></svg>\"), auto"
               }}
             >
               SOBRE
@@ -57,7 +57,8 @@ const Header = () => {
           <li>
             <TextBox
               style={{
-                cursor: `url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>🚧</text></svg>"), auto`,
+                cursor:
+                  "url(\"data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>🚧</text></svg>\"), auto"
               }}
             >
               PROJETOS
@@ -66,7 +67,8 @@ const Header = () => {
           <li>
             <TextBox
               style={{
-                cursor: `url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>🚧</text></svg>"), auto`,
+                cursor:
+                  "url(\"data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>🚧</text></svg>\"), auto"
               }}
             >
               BLOG

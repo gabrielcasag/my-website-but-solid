@@ -1,3 +1,5 @@
+@use "../../styles/_vars.scss";
+
 .aboutMeSection {
   display: flex;
   flex-direction: column;
@@ -28,6 +30,16 @@
   background-image: url("../../assets/me2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  transition: filter 0.4s ease-in-out;
+
+  &:hover {
+    filter: brightness(1.2);
+    box-shadow: 4px 2px 12px var(--box-shadow);
+
+    cursor: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>🏄‍♂️</text></svg>"),
+      auto;
+  }
 }
 
 .myInfoContainer {
@@ -36,17 +48,46 @@
   row-gap: 1rem;
   z-index: 9;
 
+  // my name
   > h1 {
-    font-size: clamp(24px, 1.5vw, 32px);
+    font-size: 1.5rem;
   }
 
+  // company
   > h2 {
-    font-size: 16px;
+    font-size: 0.8rem;
     font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    i {
+      font-size: vars.$icon-sizes;
+    }
+  }
+
+  // location
+  > small {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    i {
+      font-size: vars.$icon-sizes;
+
+      // color: #4ae963;
+      // color: #2dd881;
+      color: #4d8b31;
+      // color: rgb(119, 198, 91);
+
+      transform: rotate(90deg);
+      animation: moveLocation 5s infinite alternate;
+    }
   }
 
   > p {
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 8px var(--box-shadow);
     background-color: var(--color-fg);
 
     padding: 1rem;
@@ -58,34 +99,17 @@
 
     min-height: 80px;
   }
-
-  > small {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-
-    i {
-      color: #4ae963;
-      // color: #60d2af;
-
-      font-size: 16px;
-      animation: moveLocation 7s infinite alternate;
-
-      transition: all 2s ease;
-      // animation: name duration timing-function delay iteration-count  fill-mode;
-    }
-  }
 }
 
 @keyframes moveLocation {
-  0% {
-    transform: rotate(0);
+  25% {
+    transform: rotate(100deg);
   }
   50% {
-    transform: rotate(-15deg);
+    transform: rotate(80deg);
   }
   100% {
-    filter: brightness(150%);
-    transform: rotate(0);
+    filter: brightness(120%);
+    transform: rotate(90deg);
   }
 }

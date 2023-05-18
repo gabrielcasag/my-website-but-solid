@@ -1,0 +1,20 @@
+/* devices */
+$mobileS: 320px;
+$mobileM: 375px;
+$mobileL: 425px;
+$tablet: 768px;
+$laptop: 1024px;
+$laptopL: 1440px;
+$desktop: 2560px;
+$max-width-container: $laptop;
+$icon-sizes: 14px;
+
+// Light theme
+$bg-color-dark: rgb(18, 18, 18);
+$fg-color-dark: rgb(240, 240, 240);
+$box-shadow-dark: rgba(240, 240, 240, 0.5);
+
+// Dark theme
+$bg-color-light: rgb(255, 255, 255);
+$fg-color-light: rgb(18, 18, 18);
+$box-shadow-light: rgba(18, 18, 18, 0.5);

@@ -15,9 +15,8 @@ const AboutMe = () => {
 
   return (
     <section class={styles.aboutMeSection}>
-      <div class={styles.imageWrapper}>
-        {/* <img src={myImage} alt="Image from me" /> */}
-      </div>
+      {/* <img src={myImage} alt="Image from me" /> */}
+      <div class={styles.imageWrapper} />
 
       <Show when={data()} fallback={<h1>Loading...</h1>}>
         <div class={styles.myInfoContainer}>
@@ -25,10 +24,14 @@ const AboutMe = () => {
             <b>{data().name}</b>
           </h1>
 
-          <h2>{data().company}</h2>
+          <h2>
+            <i class="ph-duotone ph-buildings" />
+            {data().company}
+          </h2>
+
           <small>
+            <i class="ph-duotone ph-navigation-arrow" id="location-icon" />
             <span>{data().location}</span>
-            <i class="ph-duotone ph-navigation-arrow" id="location-icon"></i>
           </small>
 
           <p>{data().bio}</p>

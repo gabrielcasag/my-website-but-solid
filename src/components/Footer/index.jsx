@@ -6,9 +6,14 @@ const Footer = () => {
   return (
     <footer class={styles.footerContainer}>
       <div class={styles.ctaWrapper}>
-        <button title="Talk to me" type="button">
+        <a
+          target="_blank"
+          href="https://wa.me/5535998960098"
+          title="Click to talk with me"
+          aria-label="A click to talk with me in my whatsapp number"
+        >
           Talk to me
-        </button>
+        </a>
       </div>
 
       <div class={styles.contactsWrapper}>
