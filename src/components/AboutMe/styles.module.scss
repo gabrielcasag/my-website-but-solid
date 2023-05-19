@@ -67,11 +67,21 @@
     }
   }
 
-  // location
-  > small {
+  small {
     display: flex;
     align-items: center;
     gap: 6px;
+
+    transition: filter .2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      font-weight: bold;
+
+      i, a {
+        filter: brightness(1.75);
+      }
+    }
 
     i {
       font-size: vars.$icon-sizes;

@@ -31,7 +31,12 @@ const AboutMe = () => {
 
           <small>
             <i class="ph-duotone ph-navigation-arrow" id="location-icon" />
-            <span>{data().location}</span>
+            <a
+              href={`https://www.google.com/search?q=${data().location}`}rel="noreferrer noopener"
+              target="_blank"
+            >
+              {data().location}
+            </a>
           </small>
 
           <p>{data().bio}</p>
