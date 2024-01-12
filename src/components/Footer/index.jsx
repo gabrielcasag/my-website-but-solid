@@ -16,7 +16,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <div class={styles.contactsWrapper}>
+      {/* <nav class={styles.contactsWrapper}>
         <a target="_blank" href="mailto:gabrielgc.dev@gmail.com">
           <TextBox>MAIL</TextBox>
         </a>
@@ -32,7 +32,7 @@ const Footer = () => {
         <a target="_blank" href="https://twitch.tv/gbrl808">
           <TextBox>TWITCH</TextBox>
         </a>
-      </div>
+      </nav> */}
     </footer>
   );
 };

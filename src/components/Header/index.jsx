@@ -42,7 +42,7 @@ const Header = () => {
         <a href="">G</a>
       </div>
 
-      <nav class={styles.navbar}>
+      {/* <nav class={styles.navbar}>
         <ul>
           <li>
             <TextBox
@@ -79,6 +79,24 @@ const Header = () => {
             <TextBox onClick={toggleTheme}>THEME</TextBox>
           </li>
         </ul>
+      </nav> */}
+
+      <nav class={styles.contactsWrapper}>
+        <a target="_blank" href="mailto:gabrielgc.dev@gmail.com">
+          <TextBox>MAIL</TextBox>
+        </a>
+
+        <a target="_blank" href="https://www.github.com/gabrielcasag">
+          <TextBox>GITHUB</TextBox>
+        </a>
+
+        <a target="_blank" href="https://www.linkedin.com/in/gabrielcasag/">
+          <TextBox>LINKEDIN</TextBox>
+        </a>
+
+        <a target="_blank" href="https://twitch.tv/gbrl808">
+          <TextBox>TWITCH</TextBox>
+        </a>
       </nav>
     </header>
   );

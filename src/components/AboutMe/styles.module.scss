@@ -22,7 +22,7 @@
   box-shadow: 4px 2px 8px var(--box-shadow);
 
   width: auto;
-  height: 184px;
+  height: 192px;
 
   background-color: var(--color-fg);
   overflow: hidden;
@@ -122,4 +122,15 @@
     filter: brightness(120%);
     transform: rotate(90deg);
   }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  .aboutMeSection {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
 }
